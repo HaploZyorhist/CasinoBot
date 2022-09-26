@@ -1,0 +1,14 @@
+{
+  "profiles": {
+    "CasinoBot": {
+      "commandName": "Project",
+      "environmentVariables": {
+        "Key": "Value",
+        "prefix": "!",
+        "token": "OTQ3NTA5NjQ0NzA2ODY5MjY5.YhuTHw.SmlyhF66smudtKscCCriAbCevZY",
+        "BotName": "ElemonstersDev",
+        "BotDiscriminator": "5386"
+      }
+    }
+  }
+}
