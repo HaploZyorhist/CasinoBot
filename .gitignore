@@ -363,4 +363,4 @@ MigrationBackup/
 FodyWeavers.xsd
 
 # Ignore launchsettings file
-CasinoBot/Properties/launchSettings.json
+*/Properties/launchSettings.json
