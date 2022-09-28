@@ -43,5 +43,5 @@ Prepared by Zyorhist
 	Wallet - the user's current amount of currency
 	Line - what slots are used to calculate winnings (eg line 1 is center line, line 2 is top line, line 3 is bottom line, etc)
 8. Dependencies
-		No tasks depend on this taks
-		This task depends on the user currency update task
+	No tasks depend on this taks
+	This task depends on the user currency update task
