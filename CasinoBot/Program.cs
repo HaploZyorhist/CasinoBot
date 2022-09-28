@@ -1,4 +1,5 @@
 ﻿using CasinoBot.Services;
+using CasinoBot.Services.Interfaces;
 using Discord;
 using Discord.Commands;
 using Discord.WebSocket;
@@ -38,8 +39,15 @@ namespace CasinoBot
                 .AddSingleton<InteractivityService>()
                 .AddSingleton(new InteractivityConfig { DefaultTimeout = TimeSpan.FromSeconds(15) })
 
-                // Custom Services
+            #region Custom Services
+
+                // Singletons
                 .AddSingleton<CommandHandlerService>()
+                .AddSingleton<IUserInformation, UserInformation>()
+
+                // Transients
+
+            #endregion
 
                 // Database
                 //.AddDbContext<LoLBotContext>(options =>
