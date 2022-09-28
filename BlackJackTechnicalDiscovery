@@ -1,0 +1,15 @@
+Definitions 
+Deal - when the cards are distributed to the players.
+Wallet - the user's current currency.
+
+Intent
+	This task would be to create a game of blackjack that players can participate in.  There would need to be any number of tables (to infinite) and each table
+	sits up to 5 players.  Each table will start with 10 decks of cards and pull from the decks for dealing cards to players at the table.  The deck is updated
+	when dealing and when it reaches 100 cards the deck will reset to 5 new decks.  Players play against the dealer and each table plays all players at that table
+	at one time.  IE players 1-5 play against the dealer at in unison for that deal.  Tables do not need ot be in sync with one another.  Players will need to be
+	limited on how long they are allowed to pay the ante before they are removed from the table.  Each table will start the next deal after X time from the end 
+	of the last deal.  If no players are present for the deal, the table is removed from the active tables. Winnings are distributed to the user's wallet.
+	
+	Dependencies
+		No other tasks depend on this functionalijty
+		This task depends on the user wallet
