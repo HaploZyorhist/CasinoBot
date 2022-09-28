@@ -11,7 +11,7 @@ Prepared by Zyorhist
 		plays have been played.  It should increase at each play and should reset to a base value when someone wins the jackpot.  It also updates for winnings, 
 		never dropping below a certain value.
 	1.2 Priority 
-			Medium 
+		Medium 
 2. Major Deliverables/Key Events Anticipated 
 	Milestone/Event														Time (Labor estimate) 
 		Slot Roller
