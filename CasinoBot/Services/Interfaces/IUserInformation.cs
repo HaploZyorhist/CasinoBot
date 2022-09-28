@@ -18,6 +18,11 @@ namespace CasinoBot.Services.Interfaces
         /// <returns></returns>
         Task Payin(int cost);
 
+        /// <summary>
+        /// Method for adding money to the user's wallet
+        /// </summary>
+        /// <param name="winnings">the amount that the user won playing the game</param>
+        /// <returns></returns>
         Task Payout(int winnings);
     }
 }
