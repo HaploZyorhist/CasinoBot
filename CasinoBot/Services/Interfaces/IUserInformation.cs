@@ -11,6 +11,11 @@ namespace CasinoBot.Services.Interfaces
     /// </summary>
     public interface IUserInformation
     {
+        /// <summary>
+        /// Method for removing money from the user's wallet
+        /// </summary>
+        /// <param name="cost">the amount that the user is paying to play</param>
+        /// <returns></returns>
         Task Payin(int cost);
 
         Task Payout(int winnings);
