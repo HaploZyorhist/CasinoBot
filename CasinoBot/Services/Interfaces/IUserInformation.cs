@@ -11,5 +11,8 @@ namespace CasinoBot.Services.Interfaces
     /// </summary>
     public interface IUserInformation
     {
+        Task Payin(int cost);
+
+        Task Payout(int winnings);
     }
 }
