@@ -18,6 +18,7 @@ namespace CasinoBot.Services
             return;
         }
 
+        /// <inheritdoc />
         public async Task Payout (int winnings)
         {
             return;
