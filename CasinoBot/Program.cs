@@ -1,4 +1,5 @@
 ﻿using CasinoBot.Services;
+using CasinoBot.Services.Interfaces;
 using Discord;
 using Discord.Commands;
 using Discord.WebSocket;
@@ -15,7 +16,13 @@ namespace CasinoBot
 
         public async Task MainAsync()
         {
-            _client = new DiscordSocketClient();
+            var config = new DiscordSocketConfig()
+            {
+                // Other config options can be presented here.
+                GatewayIntents = GatewayIntents.All
+            };
+
+            _client = new DiscordSocketClient(config);
 
             var services = ConfigureServices();
 
@@ -40,6 +47,7 @@ namespace CasinoBot
 
                 // Custom Services
                 .AddSingleton<CommandHandlerService>()
+                .AddTransient<ISlotMachine, SlotMachine>()
 
                 // Database
                 //.AddDbContext<LoLBotContext>(options =>
