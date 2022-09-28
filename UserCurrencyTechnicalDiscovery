@@ -1,0 +1,11 @@
+Definitions
+	Wallet - a user's current amount of currency
+	User - the discord member who initiated the command
+
+Goals
+	This task will need to create a tracking system for managing user wallet.  This will later be setup for using a database, but the system should allow intake of
+	how much to adjust a user's wallet by and not allow them to go into the negative.  This value should be constant across the entire project and playing one 
+	game will update the value that would be used for another game.
+	
+Dependencies
+	All other games depend on this functionality and will call the methods for updating the users wallet for ante's and payouts
