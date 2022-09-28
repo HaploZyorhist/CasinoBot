@@ -1,35 +1,47 @@
-Definitions
+Project Technical Discovery/Statement of Work 
+Date Submitted 9/28/22 
+Project Name Casino Bot Slots Machine 
+Prepared by Zyorhist
+
+1. Description and Scope 
+	1.1 Summary of Work Requested and Benefits 
+				The goal of the slots machine is to create a slot machine functionality that allows players to gamble against the randomness of slot wheels.  
+				The slot wheels shouldbe preset in what order the icons are in, they should randomly select a center spot for where the wheel lands then 
+				calculate winnings based on whether they paid to play on that line.  The slots winnings are part of a pool of money that is based on how many 
+				plays have been played.  It should increase at each play and should reset to a base value when someone wins the jackpot.  It also updates for winnings, 
+				never dropping below a certain value.
+	1.2 Priority 
+			Medium 
+2. Major Deliverables/Key Events Anticipated 
+		Milestone/Event																		Time (Labor estimate) 
+			Slot Roller
+				Create a specific order for icons on each wheel
+				Select a specific spot on each wheel for what the center landing spot is
+				Calculate whether player wins on a line based on where the wheels land and whether the player played those lines
+			Slots winning pool
+				Winning pool update
+					When players pay in to play the pool updates
+					When there are winnings the pool updates 
+					Winning pool reset when jackpot is hit
+3. Resource Requirements 
+	3.1 Detailed Plan for Resource Assignments 
+	3.2 Other Resources (Hardware, Software, Money, etc.) 
+	3.3 Expected commitments from other departments or people. 
+4. Risks and Concerns 
+	If implimented improperly the user can have improper amounts of currency paid or incorrect amount of currency won
+	If implimented improperly the machine winning value may not reset 
+	If implimented improperly the winning value may not increment for the user's pay in
+	if implemented improperly the wheels can calculate payout in the wrong directions (ie vertical calculation of the wheel vs horizontal calculation of the
+			wheel)
+	If wheels are updated at a later time, the system needs to be able to have minimal changes to allow for the proper calculation of winnings and proper
+			rolling to make sure that all slots are accounted for
+5. Project Completion Criteria 
+6. Outstanding Issues 
+7. Definitions
 	Wheel - A slider for the slots machine
 	Slot - the spot on the wheel that displays a image or number for determining wins
 	Wallet - the user's current amount of currency
 	Line - what slots are used to calculate winnings (eg line 1 is center line, line 2 is top line, line 3 is bottom line, etc)
-
-Intent
-	The goal of the slots machine is to create a slot machine functionality that allows players to gamble against the randomness of slot wheels.  The slot wheels should
-	be preset in what order the icons are in, they should randomly select a center spot for where the wheel lands then calculate winnings based on whether they paid to 
-	play on that line.  The slots winnings are part of a pool of money that is based on how many plays have been played.  It should increase at each play and should 
-	reset to a base value when someone wins the jackpot.  It also updates for winnings, never dropping below a certain value.
-	
-	Dependencies
+8. Dependencies
 		No tasks depend on this taks
 		This task depends on the user currency update task
-		
-	Risks
-		If implimented improperly the user can have improper amounts of currency paid or incorrect amount of currency won
-		If implimented improperly the machine winning value may not reset 
-		If implimented improperly the winning value may not increment for the user's pay in
-		if implemented improperly the wheels can calculate payout in the wrong directions (ie vertical calculation of the wheel vs horizontal calculation of the
-			wheel)
-		If wheels are updated at a later time, the system needs to be able to have minimal changes to allow for the proper calculation of winnings and proper
-			rolling to make sure that all slots are accounted for
-		
-	Actions
-		Slot Roller
-			Create a specific order for icons on each wheel
-			Select a specific spot on each wheel for what the center landing spot is
-			Calculate whether player wins on a line based on where the wheels land and whether the player played those lines
-		Slots winning pool
-			Winning pool update
-				When players pay in to play the pool updates
-				When there are winnings the pool updates 
-				Winning pool reset when jackpot is hit
