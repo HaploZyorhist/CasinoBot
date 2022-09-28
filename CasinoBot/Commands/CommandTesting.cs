@@ -25,6 +25,10 @@ namespace CasinoBot.Commands
 
         #region CTOR
 
+        /// <summary>
+        /// constructor for the method
+        /// </summary>
+        /// <param name="userInfo">object containing user information methods</param>
         public CommandTesting(IUserInformation userInfo)
         {
             _userInfo = userInfo;
