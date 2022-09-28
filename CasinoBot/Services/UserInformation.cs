@@ -12,6 +12,7 @@ namespace CasinoBot.Services
         //TODO: Turn this into a database connection instead of a concurrent dictionary
         public ConcurrentDictionary<ulong, UserData> Information = new ConcurrentDictionary<ulong, UserData>();
 
+        /// <inheritdoc />
         public async Task Payin (int cost)
         {
             return;
