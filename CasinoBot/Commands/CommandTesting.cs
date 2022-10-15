@@ -43,6 +43,7 @@ namespace CasinoBot.Commands
         public async Task TestRegisterUserCommand()
         {
             var context = Context;
+            var user = context.User;
             try
             {
                 await ReplyAsync($"{nameof(TestRegisterUserCommand)} has been hit");
