@@ -5,6 +5,7 @@
     /// </summary>
     public class UserData
     {
+        //TODO: Turn this into database driven data instead of part of the concurrent dictionary
         /// <summary>
         /// The amount of cash the user has
         /// </summary>
