@@ -10,6 +10,13 @@ namespace CasinoBot.Services.Interfaces
     public interface IUserInformation
     {
         /// <summary>
+        /// Method for registering a user to the system
+        /// </summary>
+        /// <param name="request">request object containing data for the registration of the user</param>
+        /// <returns>response object containing the results of the request</returns>
+        Task<Response<RegisterResponse>> Register(RegisterRequest request);
+
+        /// <summary>
         /// Method for removing money from the user's wallet
         /// </summary>
         /// <param name="request">object containing data on paying in for the game</param>

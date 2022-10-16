@@ -6,6 +6,8 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using CasinoBot.Services.Interfaces;
+using CasinoBot.Domain.UserInformation.Requests;
+using CasinoBot.Models;
 
 namespace CasinoBot.Commands
 {
@@ -44,9 +46,26 @@ namespace CasinoBot.Commands
         {
             var context = Context;
             var user = context.User;
+
             try
             {
-                await ReplyAsync($"{nameof(TestRegisterUserCommand)} has been hit");
+                var request = new RegisterRequest
+                {
+                    Id = user.Id,
+                };
+
+                var result = await _userInfo.Register(request);
+
+                if(result.Status != Status.Success)
+                {
+                    throw new Exception(result.Errors?.ToString());
+                }
+
+                var sb = new StringBuilder();
+                sb.AppendLine($"{nameof(TestRegisterUserCommand)} has been hit");
+                sb.AppendLine($"<@{request.Id}> has been registered and has {result.Result.Cash} available");
+
+                await ReplyAsync(sb.ToString());
             }
             catch (Exception ex)
             {
@@ -56,12 +75,36 @@ namespace CasinoBot.Commands
 
         [Command("Ante")]
         [Summary("This command is used for testing the paying of the ante cost")]
-        public async Task TestAnteCommand()
+        public async Task TestAnteCommand(params string[] args)
         {
             var context = Context;
+            var user = context.User;
+
             try
             {
-                await ReplyAsync($"{nameof(TestAnteCommand)} has been hit");
+                if (!int.TryParse(args[0], out int ante))
+                {
+                    throw new Exception("Please enter a valid number for the Ante");
+                }
+
+                var request = new PayInRequest
+                {
+                    Id = user.Id,
+                    Cost = ante
+                };
+
+                var result = await _userInfo.PayIn(request);
+
+                if(result.Status != Status.Success)
+                {
+                    throw new Exception(result.Messages?.ToString());
+                }
+
+                var sb = new StringBuilder();
+
+                sb.AppendLine($"{nameof(TestAnteCommand)} has been hit");
+                sb.AppendLine($"<@{request.Id}> has {result.Result.Cash} remaining");
+                await ReplyAsync(sb.ToString());
             }
             catch (Exception ex)
             {
@@ -69,14 +112,38 @@ namespace CasinoBot.Commands
             }
         }
 
-        [Command("Payout")]
+        [Command("Win")]
         [Summary("This command is used for testing the game payouts")]
-        public async Task TestPayoutCommand()
+        public async Task TestPayoutCommand(params string[] args)
         {
             var context = Context;
+            var user = context.User;
+
             try
             {
-                await ReplyAsync($"{nameof(TestPayoutCommand)} has been hit");
+                if (!int.TryParse(args[0], out int winnings))
+                {
+                    throw new Exception("Please enter a valid number for the Winnings");
+                }
+
+                var request = new PayOutRequest
+                {
+                    Id = user.Id,
+                    Cash = winnings
+                };
+
+                var result = await _userInfo.PayOut(request);
+
+                if (result.Status != Status.Success)
+                {
+                    throw new Exception(result.Messages?.ToString());
+                }
+
+                var sb = new StringBuilder();
+
+                sb.AppendLine($"{nameof(TestAnteCommand)} has been hit");
+                sb.AppendLine($"<@{request.Id}> has {result.Result.Cash} remaining");
+                await ReplyAsync(sb.ToString());
             }
             catch (Exception ex)
             {

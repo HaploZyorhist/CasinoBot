@@ -1,12 +1,12 @@
 ﻿namespace CasinoBot.Domain.UserInformation.Responses
 {
     /// <summary>
-    /// the response for when the user pays in
+    /// Response object containing the results of the registration
     /// </summary>
-    public class PayInResponse
+    public class RegisterResponse
     {
         /// <summary>
-        /// the user's cash after the pay in
+        /// the cash the user has after registration
         /// </summary>
         public int Cash { get; set; }
     }
