@@ -14,11 +14,12 @@ Prepared by Zyorhist
 		Medium 
 2. Major Deliverables/Key Events Anticipated 
 	Milestone/Event														Time (Labor estimate) 
-		Slot Roller
-			Create a specific order for icons on each wheel
-			Select a specific spot on each wheel for what the center landing spot is
-			Calculate whether player wins on a line based on where the wheels land and whether the player played those lines
-		Slots winning pool
+		Slot Roller													20
+			Create a specific order for icons on each wheel							
+			Select a specific spot on each wheel for what the center landing spot is				
+			Calculate whether player wins on a line based on where the wheels land and whether 			
+				the player played those lines
+		Slots winning pool												20
 			Winning pool update
 				When players pay in to play the pool updates
 				When there are winnings the pool updates 
