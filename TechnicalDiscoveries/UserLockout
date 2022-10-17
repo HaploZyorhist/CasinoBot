@@ -1,0 +1,43 @@
+Project Technical Discovery/Statement of Work 
+Date Submitted 10/17/22 
+Project Name Casino Bot User Lockout
+Prepared by Zyorhist
+
+1. Description and Scope 
+	1.1 Summary of Work Requested and Benefits 
+		This task will need to create a system for tracking the user's current involvement with the game.  When the user is participating in one portion of the game
+    (ie, blackjack) they are unable to participat in another portion of the game.  This system will need to not only track whether the user is involved
+    in a portion of the game but also what game they are playing.
+	1.2 Priority 
+		High
+2. Major Deliverables/Key Events Anticipated 
+	Milestone/Event												Time (Labor estimate)
+		User Lockout    										5 hours
+			Modify UserInformation to include the user's current lockout status
+      Track the user's current game
+      If the game has multiple seats (or tables) track that as well
+		Testing       											5 hours
+			Test user lockout
+      Test tracking user's game involvemnt and tracking
+3. Resource Requirements 
+	3.1 Detailed Plan for Resource Assignments 
+		3.1.1 Contributors will be able to pick up milestones at their own discression
+	3.2 Other Resources (Hardware, Software, Money, etc.) 
+		3.2.1 No other resources needed
+	3.3 Expected commitments from other departments or people.
+		3.3.1 Project manager (Zyorhist) should be available for guidance and questions.  Project could be held up if PM is unavailable.
+4. Risks and Concerns 
+	If implimented improperly the user may be locked out of other games 
+	If implimented improperly the user may not be locked out of any games
+	If implimented improperly the user may be able to play multiple instances of the same game
+5. Project Completion Criteria 
+	The project is complete when:
+		the user can be locked out and unlocked properly
+		the system knows what game the user is playing and where in that game they are
+6. Outstanding Issues
+	Currently the user is unable to play any game and multiple instances at the same time
+7. Definitions
+	User - the discord member who initiated the command
+8. Dependencies
+	All other games depend on this functionality and will call the methods for updating the users lockout
+	This task does not depend on any other functionality
