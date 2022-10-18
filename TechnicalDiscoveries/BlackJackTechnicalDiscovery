@@ -1,15 +1,60 @@
-Definitions 
-Deal - when the cards are distributed to the players.
-Wallet - the user's current currency.
+Project Technical Discovery/Statement of Work 
+Date Submitted 10/17/22 
+Project Name Casino Bot BlackJack
+Prepared by Zyorhist
 
-Intent
-	This task would be to create a game of blackjack that players can participate in.  There would need to be any number of tables (to infinite) and each table
-	sits up to 5 players.  Each table will start with 10 decks of cards and pull from the decks for dealing cards to players at the table.  The deck is updated
-	when dealing and when it reaches 100 cards the deck will reset to 5 new decks.  Players play against the dealer and each table plays all players at that table
-	at one time.  IE players 1-5 play against the dealer at in unison for that deal.  Tables do not need ot be in sync with one another.  Players will need to be
-	limited on how long they are allowed to pay the ante before they are removed from the table.  Each table will start the next deal after X time from the end 
-	of the last deal.  If no players are present for the deal, the table is removed from the active tables. Winnings are distributed to the user's wallet.
-	
-	Dependencies
-		No other tasks depend on this functionalijty
-		This task depends on the user wallet
+1. Description and Scope 
+	1.1 Summary of Work Requested and Benefits 
+		This task would be to create a game of blackjack that players can participate in.  There would need to be any number of tables (to infinite) 
+		and each table sits up to 5 players.  Each table will start with 10 decks of cards and pull from the decks for dealing cards to players at 
+		the table.  The deck is updated when dealing and when it reaches 100 cards the deck will reset to 5 new decks.  Players play against the 
+		dealer and each table plays all players at that table at one time.  IE players 1-5 play against the dealer at in unison for that deal.  
+		Tables do not need ot be in sync with one another.  Players will need to be limited on how long they are allowed to pay the ante before they 
+		are removed from the table.  Each table will start the next deal after X time from the end of the last deal.  If no players are present for 
+		the deal, the table is removed from the active tables. Winnings are distributed to the user's wallet.
+	1.2 Priority 
+		Medium 
+2. Major Deliverables/Key Events Anticipated 
+	Milestone/Event														Time (Labor estimate) 
+		Deck Handling													10
+			Create a card deck containing the contents of 10 standard decks
+			On deal the deck updates and removes the dealt card
+			When the deck gets below 100 cards it resets
+		Dealer Handling 												20
+			The dealer must always take a new card if their current score is under 17
+			The dealer must not take a card if their current score is over 16
+			The dealer loses if their score goes over 21
+		Player Handling 												40
+			The player will be given the option to 'hit' or 'stand'
+				if the player hits they get another card
+				if their score goes over 21 they lose
+				if they stand their turn ends
+			The player is given the option of splitting if their current had is doubles
+				if they split they must pay the ante again or they cannot split
+		Win handling													30
+			If the dealer gets 21 on their first two cards the dealer always wins
+			If the dealer has a higher score than the player the dealer wins
+			If the player gets 21 on their first two cards the player then wins
+			If the dealer busts the player wins
+3. Resource Requirements 
+	3.1 Detailed Plan for Resource Assignments 
+	3.2 Other Resources (Hardware, Software, Money, etc.) 
+	3.3 Expected commitments from other departments or people. 
+4. Risks and Concerns 
+	If implimented improperly the user win improperly
+	If implimented improperly the computer win improperly
+	If implimented improperly the users may not get turns
+	If implimented improperly the computer may not get cards dealt
+5. Project Completion Criteria 
+	The project is complete when the game of blackjack can follow the basic rules of the game and players can pay the ante
+	and get win payouts.  
+	Testing must be implemented and completed
+6. Outstanding Issues 
+	Currently there is no game system for the players to play so they are unable to participate in the game
+7. Definitions
+	Hit - The player wishes to be dealt another card
+	Stand - the player wishes to remain with the cards they have
+	Bust - The player/dealer loses the game
+8. Dependencies
+	No tasks depend on this taks
+	This task depends on the user currency update task
