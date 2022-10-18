@@ -14,6 +14,9 @@ Prepared by Zyorhist
 		Medium 
 2. Major Deliverables/Key Events Anticipated 
 	Milestone/Event														Time (Labor estimate) 
+		Ante Handling 													5
+			When a player is playing the slots they will need to pay the ante for the number of lines they
+				wish to play
 		Slot Roller													20
 			Create a specific order for icons on each wheel							
 			Select a specific spot on each wheel for what the center landing spot is				
@@ -24,6 +27,8 @@ Prepared by Zyorhist
 				When players pay in to play the pool updates
 				When there are winnings the pool updates 
 				Winning pool reset when jackpot is hit
+		Payout Handling 												5
+			When a player wins their wallet needs to be updated for the winning amount 		
 3. Resource Requirements 
 	3.1 Detailed Plan for Resource Assignments 
 	3.2 Other Resources (Hardware, Software, Money, etc.) 
