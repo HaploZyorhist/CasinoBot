@@ -16,6 +16,8 @@ Prepared by Zyorhist
 		Medium 
 2. Major Deliverables/Key Events Anticipated 
 	Milestone/Event														Time (Labor estimate) 
+		Ante Handling 													5
+			When players attempt to play a game of blackjack they will need to pay the ante
 		Deck Handling													10
 			Create a card deck containing the contents of 10 standard decks
 			On deal the deck updates and removes the dealt card
